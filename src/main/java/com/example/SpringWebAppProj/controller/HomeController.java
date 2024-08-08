@@ -1,5 +1,6 @@
 package com.example.SpringWebAppProj.controller;
 
+import com.example.SpringWebAppProj.Alien;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
@@ -21,11 +22,11 @@ public class HomeController {
 //        return "home"; //don't put .jsp at the end
 //    }
 
-    public ModelAndView homePage(@RequestParam("name") String myName){ // send a request.
+    public ModelAndView homePage(Alien alien){ // send a request.
 
         ModelAndView modelAndView = new ModelAndView();
-        System.out.println("Hi " + myName); //printing on console and verfiy is the name coming back
-        modelAndView.addObject("name",myName); // send data myName
+
+        modelAndView.addObject("obj",alien); // send data myName
         modelAndView.setViewName("home");                  //and specify the ViewName
         return modelAndView; //don't put .jsp at the end
     }

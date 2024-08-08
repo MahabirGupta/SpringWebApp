@@ -7,7 +7,7 @@
     <title>Home Page</title>
 </head>
 <body>
-    <h1>Welcome to the Home Page ${name}</h1>
+    <h1>Welcome to the Home Page ${obj.alienID}, ${obj.alienName}, ${obj.lang} </h1>
     <p>This is a simple JSP page.</p>
     <p>I love Spring Boot<p>
 </body>
